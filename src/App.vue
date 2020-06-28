@@ -9,7 +9,7 @@
       |
 
       {{good.price}}
-      <button @click="addCart(index)">添加购物车</button>
+      <el-button type="primary" icon="el-icon-plus" @click="addCart(index)" circle></el-button>
     </li>
   </ul>
   <table border="1">
@@ -32,6 +32,9 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import { Button } from 'element-ui';
+Vue.use(Button);
 export default {
   data(){
     return {
